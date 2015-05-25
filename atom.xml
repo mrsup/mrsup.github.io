@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://mrsup.github.io/"/>
-  <updated>2015-05-25T17:13:48.635Z</updated>
+  <updated>2015-05-25T17:17:55.722Z</updated>
   <id>http://mrsup.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://mrsup.github.io/2015/05/25/Github-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://mrsup.github.io/2015/05/25/Github-hexo搭建个人博客/</id>
     <published>2015-05-25T12:53:25.000Z</published>
-    <updated>2015-05-25T17:13:48.635Z</updated>
+    <updated>2015-05-25T17:17:55.722Z</updated>
     <content type="html"><![CDATA[<h2 id="写在前面（可忽略）">写在前面（可忽略）</h2><p>作为一个大四狗以及低智商程序狗，在赶论文的繁忙季节里忙里偷闲，居然写起来教程来，简直无可救药了。<br>一直想搭建一个属于自己的博客网站，认真写一点技术总结，积累一点学习经验，只是以前沉不下心来，各种博客用着用着出现些莫名其妙的问题又没耐心查资料解决，因此以前的博客数据都丢失了，这应该是我目前新的第一篇博客吧。<br>前几天在网上溜达的时候看见了Github+hexo搭建博客的教程，心痒无聊之下就试着玩了玩，结果一不小心就花了三两天时间，万幸终于还是成功搭建好了，在尝试搭建的过程中，出现了各种各样的问题，耐着性子百度查资料都解决了，心痒之下便想着整理一下博客的搭建教程，想着也许能帮助后来尝试者少走点弯路吧（网络上有很多Github+hexo搭建博客的教程都是以前写的，和现在的版本不合，因此内容将不同从而出现各种问题）。<br>原谅我絮絮叨叨感概这么多，以下正文。<br>PS. 本教程只涉及操作方法，不对其原理进行过多讨论，预知详情，请自行百度。<br><a id="more"></a>  </p>
 <h2 id="基础准备">基础准备</h2><h3 id="写在前面">写在前面</h3><p>如果你还不知道本次教程的任务目标是什么，那你应该关注这么几个关键字：  </p>
 <ul>
@@ -74,9 +74,9 @@ git pull
 </li>
 <li><p>在<code>Git Bash</code>中输入：</p>
 <pre><code><span class="title">hexo</span> d
-</code></pre><p>如果提示``</p>
+</code></pre><p>如果提示<code>Enter passphrase for key &#39;/c/Users/*/.ssh/id_rsa&#39;</code>则输入你设置的<code>SSH</code>密码</p>
 </li>
-<li>待部署完成后访问：<code>http://username.github.io</code>(<code>username</code>处填写你的<code>Github</code>用户名)即可访问你的博客。</li>
+<li>待部署完成后访问：<code>http://username.github.io</code>(<code>username</code>处填写你的<code>Github</code>用户名)即可访问你的博客。<h2 id="后记">后记</h2>该教程还未编写完全，作者会随时更新！<br>如果遇到什么问题，可以在下方留言，我很乐意和你一起共同讨论。</li>
 </ol>
 ]]></content>
     <summary type="html">
