@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Github,Hexo,博客," />
+  <meta name="keywords" content="翻墙，解决方案," />
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-  <title> Github+hexo搭建个人博客 // Mrsup's Blog. </title>
+  <title> PC端翻墙解决方案 // Mrsup's Blog. </title>
 </head>
 
 <body>
@@ -138,7 +138,7 @@
           
           
             
-              Github+hexo搭建个人博客
+              PC端翻墙解决方案
             
           
         </h1>
@@ -146,7 +146,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-05-25
+          发表于 2015-05-26
         </span>
 
         
@@ -166,8 +166,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/05/25/Github-hexo搭建个人博客/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/25/Github-hexo搭建个人博客/"></span>
+            <a href="/2015/05/26/翻墙解决方案/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/26/翻墙解决方案/"></span>
             </a>
           </span>
           
@@ -181,63 +181,28 @@
       
 
       
-        <h2 id="写在前面（可忽略）">写在前面（可忽略）</h2><p>作为一个大四狗以及低智商程序狗，在赶论文的繁忙季节里忙里偷闲，居然写起来教程来，简直无可救药了。<br>一直想搭建一个属于自己的博客网站，认真写一点技术总结，积累一点学习经验，只是以前沉不下心来，各种博客用着用着出现些莫名其妙的问题又没耐心查资料解决，因此以前的博客数据都丢失了，这应该是我目前新的第一篇博客吧。<br>前几天在网上溜达的时候看见了Github+hexo搭建博客的教程，心痒无聊之下就试着玩了玩，结果一不小心就花了三两天时间，万幸终于还是成功搭建好了，在尝试搭建的过程中，出现了各种各样的问题，耐着性子百度查资料都解决了，心痒之下便想着整理一下博客的搭建教程，想着也许能帮助后来尝试者少走点弯路吧（网络上有很多Github+hexo搭建博客的教程都是以前写的，和现在的版本不合，因此内容将不同从而出现各种问题）。<br>原谅我絮絮叨叨感概这么多，以下正文。<br>PS. 本教程只涉及操作方法，不对其原理进行过多讨论，预知详情，请自行百度。<br><a id="more"></a>  </p>
-<h2 id="基础准备">基础准备</h2><h3 id="写在前面">写在前面</h3><p>如果你还不知道本次教程的任务目标是什么，那你应该关注这么几个关键字：  </p>
-<ul>
-<li><strong>博客</strong>：简单说来就是指可以发布文章的东东；</li>
-<li><strong>自定义</strong>：文章的样式、博客的样式等完全可以自由定义，不像新浪博客、网易博客等界面固定；</li>
-<li><strong>免费</strong>：不用花钱！</li>
-<li><strong>静态化</strong>：一个页面对应一篇文章，不能向其他高级网站一样高度交互；</li>
-</ul>
-<h3 id="准备工作">准备工作</h3><ol>
-<li>注册 <a href="https://github.com" target="_blank" rel="external">Github</a> 帐号；</li>
-<li>安装 <a href="https://nodejs.org/" target="_blank" rel="external">nodejs</a> ；</li>
-<li>安装 <a href="http://www.git-scm.com/download/" target="_blank" rel="external">Git</a> ；</li>
-</ol>
-<h2 id="预先配置">预先配置</h2><h3 id="配置SSH">配置SSH</h3><ol>
-<li>鼠标右键选择 <strong>Git Bash Here</strong>  </li>
-<li>输入<code>cd ~/.ssh</code> 回车</li>
-<li>输入<code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code> 邮件地址处填写你的邮件地址</li>
-<li>如果出现<code>Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa)</code> 直接回车就好</li>
-<li><code>Enter passphrase (empty for no passphrase)</code> 输入你的密码</li>
-<li><code>Enter same passphrase again</code> 再次输入密码</li>
-<li>如果出现一个虚线框包围的画则证明已经成功设置ssh key了！<h3 id="添加SSH_Key到Github">添加SSH Key到Github</h3></li>
-<li>打开<code>C:\Documents and Settings\Administrator.ssh\id_rsa.pub</code>文件，如果没有找到<code>Documents and Settings</code>文件夹，请<a href="http://jingyan.baidu.com/article/574c5219e868cf6c8d9dc13a.html" target="_blank" rel="external">设置显示隐藏文件</a>，如果提示无法访问、拒绝访问，则可以<a href="http://jingyan.baidu.com/article/29697b91d55103ab20de3cc4.html" target="_blank" rel="external">更改权限</a></li>
-<li>复制<code>id_rsa.pub</code>文件中的内容</li>
-<li>登录<a href="https://github.com" target="_blank" rel="external">Github</a>，点击右上角的<code>setting</code>按钮，再点击左侧的<code>SSH heys</code>选项，再选择<code>Add SSH key</code>，再在<code>key</code>输入框粘贴刚刚复制的内容，然后点击<code>Add key</code></li>
-<li>验证是否设置成功：输入<code>ssh -T git@github.com</code>，如果出现<code>Are you sure you want to continue connecting (yes/no)?</code>则输入yes，如果出现<code>Enter passphrase for key &#39;/c/Users/*/.ssh/id_rsa&#39;</code>则输入你刚刚设置的密码，然后出现<code>Hi ***! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>则配置成功</li>
-<li>完善个人信息：<code>git config --global user.name &quot;***&quot;</code> <em>*</em>处输入用户名</li>
-<li><code>git config --global user.email &quot;****&quot;</code> <em>**</em>处输入用户名<h3 id="使用Github新建博客">使用Github<a href="https://pages.github.com/" target="_blank" rel="external">新建博客</a></h3></li>
-<li>进入<code>https://github.com</code>，点击<code>New Repository</code>按钮</li>
-<li>设置<code>Repository name</code>为 用户名.github.io ，如用户名为test，则<code>Repository name</code>填写为test.github.io，然后点击<code>Create Repository</code></li>
-<li>在本地环境下（如：<code>d:\</code>）点击右键，选择<code>Git Bash Here</code>,然后输入<code>git clone https://github.com/username/username.github.io</code> <code>username</code>处填写你的Github用户名<h3 id="使用Hexo">使用Hexo</h3></li>
-<li>参照<a href="http://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo文档</a>，安装Hexo：在刚刚的环境下输入<code>npm install -g hexo-cli</code></li>
-<li>安装完成之后，输入<code>cd username.github.io</code>进入到项目文件夹（<code>username</code>处填写你的Github用户名），然后输入<code>hexo init</code>，再输入<code>npm install</code></li>
-<li><p>使用<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">主题NEXT</a>：输入<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>下载主题，然后更改站点的<code>_config.yml</code>文件中的<code>theme</code>字段为<code>next</code>(注意theme：后面必须要有一个空格)  </p>
-<pre><code><span class="attribute">theme</span>: <span class="string">next</span>
-</code></pre><p>然后从资源管理器中进入<code>/themes/next/</code>，将<code>_config.yml.example</code>改名为<code>_config.yml</code></p>
+        <h2 id="写在前面">写在前面</h2><p>网络上有很多翻墙的教程，有的是很久以前写的，现在已经失效，有的过于简略，经常出现各种问题而不知如何解决，有的过于复杂，知其然不知其所以然，基于各种思虑，决定综合网络上的一些教程和自己的实践来撰写一个翻墙的解决方案。<br>首先，在方案的开始感谢那些无私分享技术和知识的伟大博客主们，因为有你们，学习知识才如此简单而美妙。<br>在方案的结尾部分将罗列出参考过文献与引用的网络资料，谢谢你们。<br>另外，愿意与我一同维护更新该解决方案的朋友们可以在文章下方留言，我很期待您的加入。<br>PS.由于个人资金限制，暂时只提供免费的解决方案，需要付费的一些解决方案留待以后更新。<br>关键词：<strong>PC端</strong>，<strong>Windows</strong>，<strong>免费</strong><br>当前版本：<strong>v0.1</strong>（更新时间：2015.05.26）<br><a id="more"></a>  </p>
+<h2 id="正文">正文</h2><h3 id="为什么翻墙">为什么翻墙</h3><p>因为各种各样的原因，政府基于各方面的思量，对国外的一些网站进行了一些限制，在国内无法正确访问，这好比一座墙，割断了国内和国外的世界。<br>为了能够访问国外的一些网站（比如google，youtube，facebook等），因此需要翻墙。</p>
+<h3 id="怎么翻墙">怎么翻墙</h3><p>翻墙是一件有可能简单也有可能复杂的事情，也许您只需要花几分钟下载一个软件就能翻墙，也许您需要几天的时间来学习使用工具，配置代理才能翻墙，面对本方案的目标受众不同，解决方案将由易到难，同时罗列出各解决方案的优缺点。</p>
+<h4 id="解决方案一——在线代理">解决方案一——在线代理</h4><p><strong>在线代理</strong>是最简单的翻墙方式，您不需要安装任何软件，不需要设置任何东西，只需要一步，您即可以翻墙。  </p>
+<h5 id="操作步骤">操作步骤</h5><ol>
+<li>使用任何一款浏览器，百度<strong><a href="https://www.baidu.com/s?wd=%E5%9C%A8%E7%BA%BF%E4%BB%A3%E7%90%86&amp;rsv_spt=1&amp;issp=1&amp;f=8&amp;rsv_bp=0&amp;rsv_idx=2&amp;ie=utf-8&amp;tn=baiduhome_pg&amp;rsv_enter=1&amp;rsv_sug3=13&amp;rsv_sug1=10&amp;rsv_pq=f41b0d3800066c56&amp;rsv_t=67ea3JnHS4mfYzQVqdjsj4nhlFecpPpdQ0H0ofMh3yhxicBE840veZPMxBMlfQlY%2BHx2" target="_blank" rel="external">在线代理</a></strong>，使用排名靠前的代理网站，代理网站中输入您所需要的访问的网站（如Google.com）即可访问。  <h5 id="优点与缺点">优点与缺点</h5><h6 id="优点">优点</h6></li>
+<li>最为方便快速，简单无脑。<h6 id="缺点">缺点</h6></li>
+<li>有的时候会不稳定</li>
+<li>有些网站依然无法访问</li>
+<li>速度会比正上上网慢</li>
+<li>广告较多</li>
+<li>最重要的<strong>缺点</strong>：很多网站的一些基于AJAX的功能将不可用！可以简单理解为访问过程中会出现各种各样的问题。<h4 id="解决方案二——Psiphon3">解决方案二——Psiphon3</h4><strong>Psiphon3</strong>是一种非常方便的翻墙软件，您只需要下载使用即可翻墙成功。  <h5 id="操作步骤-1">操作步骤</h5></li>
+<li>下载<a href="https://www.psiphon3.net/zh/download.html" target="_blank" rel="external">Psiphon3</a>，如果您无法正常下载，可以使用我分享的<a href="http://pan.baidu.com/s/1c0hLFYK" target="_blank" rel="external">百度网盘</a>(密码：tdet)下载，如果链接失效或者需要更新您可以通过留言提醒我。</li>
+<li>双击下载的<strong>Psiphon3.exe</strong>，等待出现<code>Psiphon Tunnel successfully connected.</code>即可使用您的浏览器自由翻墙上网了。<h5 id="优点与缺点-1">优点与缺点</h5><h6 id="优点-1">优点</h6></li>
+<li>较为方便快捷</li>
+<li>使用也比较简单<h6 id="缺点-1">缺点</h6></li>
+<li><p>刚使用，暂时还没发现</p>
+<h4 id="解决方案三——未完待续">解决方案三——未完待续</h4><h2 id="鸣谢">鸣谢</h2><p>本解决方案借鉴了以下文献与资料，感谢你们：</p>
 </li>
-<li><p>更新主题:  </p>
-<pre><code><span class="keyword">cd</span> themes/<span class="keyword">next</span>
-git pull
-</code></pre></li>
-<li><p>本地查看  </p>
-<pre><code><span class="variable">$ </span>hexo g
-<span class="variable">$ </span>hexo s
-</code></pre><p>在浏览器中访问<a href="localhost:4000" target="_blank" rel="external">localhost:4000</a>即可查看运行在本地的博客网站</p>
-<h3 id="部署到Github">部署到Github</h3></li>
-<li><p>配置你的本地站点下的<code>_config.yml</code>文件</p>
-<pre><code><span class="attribute">deploy</span>:
-    <span class="attribute">type</span>: git
-      <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:username/username.github.io.git
-      <span class="attribute">branch</span>: master
-</code></pre><p><code>username</code>处填写你的<code>Github</code>用户名</p>
+<li><p><a href="http://www.jianshu.com/p/56d56677a892" target="_blank" rel="external">GFW升级后，怎么愉悦地科学上网？</a></p>
 </li>
-<li><p>在<code>Git Bash</code>中输入：</p>
-<pre><code><span class="title">hexo</span> d
-</code></pre><p>如果提示<code>Enter passphrase for key &#39;/c/Users/*/.ssh/id_rsa&#39;</code>则输入你设置的<code>SSH</code>密码</p>
-</li>
-<li>待部署完成后访问：<code>http://username.github.io</code>(<code>username</code>处填写你的<code>Github</code>用户名)即可访问你的博客。<h2 id="后记">后记</h2>该教程还未编写完全，作者会随时更新！<br>如果遇到什么问题，可以在下方留言，我很乐意和你一起共同讨论。</li>
+<li></li>
 </ol>
 
       
@@ -247,11 +212,7 @@ git pull
       
         <div class="post-tags">
           
-            <a href="/tags/Github/"> #Github </a>
-          
-            <a href="/tags/Hexo/"> #Hexo </a>
-          
-            <a href="/tags/博客/"> #博客 </a>
+            <a href="/tags/翻墙，解决方案/"> #翻墙，解决方案 </a>
           
         </div>
       
@@ -260,11 +221,11 @@ git pull
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/26/对造轮子的一些新认识/">对造轮子的一些新认识</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/05/26/对造轮子的一些新认识/">对造轮子的一些新认识</a>
             
           </div>
         </div>
@@ -280,8 +241,8 @@ git pull
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/05/25/Github-hexo搭建个人博客/"
-               data-title="Github+hexo搭建个人博客" data-url="http://mrsup.github.io/2015/05/25/Github-hexo搭建个人博客/">
+          <div class="ds-thread" data-thread-key="2015/05/26/翻墙解决方案/"
+               data-title="PC端翻墙解决方案" data-url="http://mrsup.github.io/2015/05/26/翻墙解决方案/">
           </div>
         
       </div>
@@ -387,7 +348,7 @@ git pull
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面（可忽略）"><span class="nav-number">1.</span> <span class="nav-text">写在前面（可忽略）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础准备"><span class="nav-number">2.</span> <span class="nav-text">基础准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前面"><span class="nav-number">2.1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">2.2.</span> <span class="nav-text">准备工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预先配置"><span class="nav-number">3.</span> <span class="nav-text">预先配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置SSH"><span class="nav-number">3.1.</span> <span class="nav-text">配置SSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加SSH_Key到Github"><span class="nav-number">3.2.</span> <span class="nav-text">添加SSH Key到Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Github新建博客"><span class="nav-number">3.3.</span> <span class="nav-text">使用Github新建博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Hexo"><span class="nav-number">3.4.</span> <span class="nav-text">使用Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到Github"><span class="nav-number">3.5.</span> <span class="nav-text">部署到Github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么翻墙"><span class="nav-number">2.1.</span> <span class="nav-text">为什么翻墙</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么翻墙"><span class="nav-number">2.2.</span> <span class="nav-text">怎么翻墙</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案一——在线代理"><span class="nav-number">2.2.1.</span> <span class="nav-text">解决方案一——在线代理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#操作步骤"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">操作步骤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优点与缺点"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">优点与缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#优点"><span class="nav-number">2.2.1.2.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#缺点"><span class="nav-number">2.2.1.2.2.</span> <span class="nav-text">缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案二——Psiphon3"><span class="nav-number">2.2.2.</span> <span class="nav-text">解决方案二——Psiphon3</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#操作步骤-1"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">操作步骤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优点与缺点-1"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">优点与缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#优点-1"><span class="nav-number">2.2.2.2.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#缺点-1"><span class="nav-number">2.2.2.2.2.</span> <span class="nav-text">缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案三——未完待续"><span class="nav-number">2.2.3.</span> <span class="nav-text">解决方案三——未完待续</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸣谢"><span class="nav-number">3.</span> <span class="nav-text">鸣谢</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
