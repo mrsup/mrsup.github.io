@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Github,Hexo,博客," />
+  <meta name="keywords" content="感悟," />
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-  <title> Github+hexo搭建个人博客 // Mrsup's Blog. </title>
+  <title> 对造轮子的一些新认识 // Mrsup's Blog. </title>
 </head>
 
 <body>
@@ -138,7 +138,7 @@
           
           
             
-              Github+hexo搭建个人博客
+              对造轮子的一些新认识
             
           
         </h1>
@@ -146,14 +146,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-05-25
+          发表于 2015-05-26
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/Others/">Others</a>
+              <a href="/categories/感悟与认知/">感悟与认知</a>
 
               
               
@@ -166,8 +166,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/05/25/Github-hexo搭建个人博客/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/25/Github-hexo搭建个人博客/"></span>
+            <a href="/2015/05/26/对造轮子的一些新认识/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/26/对造轮子的一些新认识/"></span>
             </a>
           </span>
           
@@ -181,63 +181,14 @@
       
 
       
-        <h2 id="写在前面（可忽略）">写在前面（可忽略）</h2><p>作为一个大四狗以及低智商程序狗，在赶论文的繁忙季节里忙里偷闲，居然写起来教程来，简直无可救药了。<br>一直想搭建一个属于自己的博客网站，认真写一点技术总结，积累一点学习经验，只是以前沉不下心来，各种博客用着用着出现些莫名其妙的问题又没耐心查资料解决，因此以前的博客数据都丢失了，这应该是我目前新的第一篇博客吧。<br>前几天在网上溜达的时候看见了Github+hexo搭建博客的教程，心痒无聊之下就试着玩了玩，结果一不小心就花了三两天时间，万幸终于还是成功搭建好了，在尝试搭建的过程中，出现了各种各样的问题，耐着性子百度查资料都解决了，心痒之下便想着整理一下博客的搭建教程，想着也许能帮助后来尝试者少走点弯路吧（网络上有很多Github+hexo搭建博客的教程都是以前写的，和现在的版本不合，因此内容将不同从而出现各种问题）。<br>原谅我絮絮叨叨感概这么多，以下正文。<br>PS. 本教程只涉及操作方法，不对其原理进行过多讨论，预知详情，请自行百度。<br><a id="more"></a>  </p>
-<h2 id="基础准备">基础准备</h2><h3 id="写在前面">写在前面</h3><p>如果你还不知道本次教程的任务目标是什么，那你应该关注这么几个关键字：  </p>
-<ul>
-<li><strong>博客</strong>：简单说来就是指可以发布文章的东东；</li>
-<li><strong>自定义</strong>：文章的样式、博客的样式等完全可以自由定义，不像新浪博客、网易博客等界面固定；</li>
-<li><strong>免费</strong>：不用花钱！</li>
-<li><strong>静态化</strong>：一个页面对应一篇文章，不能向其他高级网站一样高度交互；</li>
-</ul>
-<h3 id="准备工作">准备工作</h3><ol>
-<li>注册 <a href="https://github.com" target="_blank" rel="external">Github</a> 帐号；</li>
-<li>安装 <a href="https://nodejs.org/" target="_blank" rel="external">nodejs</a> ；</li>
-<li>安装 <a href="http://www.git-scm.com/download/" target="_blank" rel="external">Git</a> ；</li>
-</ol>
-<h2 id="预先配置">预先配置</h2><h3 id="配置SSH">配置SSH</h3><ol>
-<li>鼠标右键选择 <strong>Git Bash Here</strong>  </li>
-<li>输入<code>cd ~/.ssh</code> 回车</li>
-<li>输入<code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code> 邮件地址处填写你的邮件地址</li>
-<li>如果出现<code>Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa)</code> 直接回车就好</li>
-<li><code>Enter passphrase (empty for no passphrase)</code> 输入你的密码</li>
-<li><code>Enter same passphrase again</code> 再次输入密码</li>
-<li>如果出现一个虚线框包围的画则证明已经成功设置ssh key了！<h3 id="添加SSH_Key到Github">添加SSH Key到Github</h3></li>
-<li>打开<code>C:\Documents and Settings\Administrator.ssh\id_rsa.pub</code>文件，如果没有找到<code>Documents and Settings</code>文件夹，请<a href="http://jingyan.baidu.com/article/574c5219e868cf6c8d9dc13a.html" target="_blank" rel="external">设置显示隐藏文件</a>，如果提示无法访问、拒绝访问，则可以<a href="http://jingyan.baidu.com/article/29697b91d55103ab20de3cc4.html" target="_blank" rel="external">更改权限</a></li>
-<li>复制<code>id_rsa.pub</code>文件中的内容</li>
-<li>登录<a href="https://github.com" target="_blank" rel="external">Github</a>，点击右上角的<code>setting</code>按钮，再点击左侧的<code>SSH heys</code>选项，再选择<code>Add SSH key</code>，再在<code>key</code>输入框粘贴刚刚复制的内容，然后点击<code>Add key</code></li>
-<li>验证是否设置成功：输入<code>ssh -T git@github.com</code>，如果出现<code>Are you sure you want to continue connecting (yes/no)?</code>则输入yes，如果出现<code>Enter passphrase for key &#39;/c/Users/*/.ssh/id_rsa&#39;</code>则输入你刚刚设置的密码，然后出现<code>Hi ***! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>则配置成功</li>
-<li>完善个人信息：<code>git config --global user.name &quot;***&quot;</code> <em>*</em>处输入用户名</li>
-<li><code>git config --global user.email &quot;****&quot;</code> <em>**</em>处输入用户名<h3 id="使用Github新建博客">使用Github<a href="https://pages.github.com/" target="_blank" rel="external">新建博客</a></h3></li>
-<li>进入<code>https://github.com</code>，点击<code>New Repository</code>按钮</li>
-<li>设置<code>Repository name</code>为 用户名.github.io ，如用户名为test，则<code>Repository name</code>填写为test.github.io，然后点击<code>Create Repository</code></li>
-<li>在本地环境下（如：<code>d:\</code>）点击右键，选择<code>Git Bash Here</code>,然后输入<code>git clone https://github.com/username/username.github.io</code> <code>username</code>处填写你的Github用户名<h3 id="使用Hexo">使用Hexo</h3></li>
-<li>参照<a href="http://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo文档</a>，安装Hexo：在刚刚的环境下输入<code>npm install -g hexo-cli</code></li>
-<li>安装完成之后，输入<code>cd username.github.io</code>进入到项目文件夹（<code>username</code>处填写你的Github用户名），然后输入<code>hexo init</code>，再输入<code>npm install</code></li>
-<li><p>使用<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">主题NEXT</a>：输入<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>下载主题，然后更改站点的<code>_config.yml</code>文件中的<code>theme</code>字段为<code>next</code>(注意theme：后面必须要有一个空格)  </p>
-<pre><code><span class="attribute">theme</span>: <span class="string">next</span>
-</code></pre><p>然后从资源管理器中进入<code>/themes/next/</code>，将<code>_config.yml.example</code>改名为<code>_config.yml</code></p>
-</li>
-<li><p>更新主题:  </p>
-<pre><code><span class="keyword">cd</span> themes/<span class="keyword">next</span>
-git pull
-</code></pre></li>
-<li><p>本地查看  </p>
-<pre><code><span class="variable">$ </span>hexo g
-<span class="variable">$ </span>hexo s
-</code></pre><p>在浏览器中访问<a href="localhost:4000" target="_blank" rel="external">localhost:4000</a>即可查看运行在本地的博客网站</p>
-<h3 id="部署到Github">部署到Github</h3></li>
-<li><p>配置你的本地站点下的<code>_config.yml</code>文件</p>
-<pre><code><span class="attribute">deploy</span>:
-    <span class="attribute">type</span>: git
-      <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:username/username.github.io.git
-      <span class="attribute">branch</span>: master
-</code></pre><p><code>username</code>处填写你的<code>Github</code>用户名</p>
-</li>
-<li><p>在<code>Git Bash</code>中输入：</p>
-<pre><code><span class="title">hexo</span> d
-</code></pre><p>如果提示<code>Enter passphrase for key &#39;/c/Users/*/.ssh/id_rsa&#39;</code>则输入你设置的<code>SSH</code>密码</p>
-</li>
-<li>待部署完成后访问：<code>http://username.github.io</code>(<code>username</code>处填写你的<code>Github</code>用户名)即可访问你的博客。<h2 id="后记">后记</h2>该教程还未编写完全，作者会随时更新！<br>如果遇到什么问题，可以在下方留言，我很乐意和你一起共同讨论。</li>
+        <h2 id="感悟根源">感悟根源</h2><p>最近搭建好了Github+Hexo博客网站，想着写很多很多的博客来展示自己，前几天折腾<strong>Chrome+Goagent+SwitchyOmega</strong>翻墙，瞎折腾了很久才成功，于是乎想整理一篇翻墙的教程博客，然而一不小心又出现了一些莫名其妙的问题又不能翻墙，心头万只草泥马奔腾而过啊！<br>今天，在逛<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>的时候看见了很多介绍翻墙的教程，仔细看了看，发现比我所想的更丰富、更全面、更优秀，于是我开始思考是否还有继续写自己教程博客的必要。开始一些自认为很有意义的感悟与认知。  </p>
+<h2 id="感悟细则">感悟细则</h2><p>互联网是一个无穷大的世界，里面有着浩瀚的知识海洋，有着各种各样不计其数的问题与答案，那么遇到问题-&gt;查找问题-&gt;解决问题，之后呢？遗忘问题么。<br>所以我认为博客很有必要存在，它可以总结问题，总结自己，它也可以表达自己，展示自己。<br>也许别人的博客比我更好更优秀，但我还是应该写的，也许我的博客现在不怎么好，但一直维护，总有一天会成为一个问题的优秀解决方案！<br>只是在编写自己博客的同时，借鉴他人的劳动成果是一件非常有意义有必要的事情。  </p>
+<pre><code>站在巨人的肩膀上才能看得更远！
+</code></pre><p>别人的博客、总结、劳动成果就好比一个个已经完成的轮子，我如果想造出自己心目中完美的轮子，那么借鉴别人就是一件很有意义的事情。</p>
+<h2 id="感悟总结">感悟总结</h2><ol>
+<li>写博客是一件很有意义、有必要的事情。</li>
+<li>博客只要一直维护，总有一天也会成为一个优秀的解决方案的。</li>
+<li>借鉴他人劳动成果是高效而有意义的。</li>
 </ol>
 
       
@@ -247,11 +198,7 @@ git pull
       
         <div class="post-tags">
           
-            <a href="/tags/Github/"> #Github </a>
-          
-            <a href="/tags/Hexo/"> #Hexo </a>
-          
-            <a href="/tags/博客/"> #博客 </a>
+            <a href="/tags/感悟/"> #感悟 </a>
           
         </div>
       
@@ -260,11 +207,11 @@ git pull
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/26/对造轮子的一些新认识/">对造轮子的一些新认识</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/05/25/Github-hexo搭建个人博客/">Github+hexo搭建个人博客</a>
             
           </div>
         </div>
@@ -280,8 +227,8 @@ git pull
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/05/25/Github-hexo搭建个人博客/"
-               data-title="Github+hexo搭建个人博客" data-url="http://mrsup.github.io/2015/05/25/Github-hexo搭建个人博客/">
+          <div class="ds-thread" data-thread-key="2015/05/26/对造轮子的一些新认识/"
+               data-title="对造轮子的一些新认识" data-url="http://mrsup.github.io/2015/05/26/对造轮子的一些新认识/">
           </div>
         
       </div>
@@ -387,7 +334,7 @@ git pull
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面（可忽略）"><span class="nav-number">1.</span> <span class="nav-text">写在前面（可忽略）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础准备"><span class="nav-number">2.</span> <span class="nav-text">基础准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前面"><span class="nav-number">2.1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">2.2.</span> <span class="nav-text">准备工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预先配置"><span class="nav-number">3.</span> <span class="nav-text">预先配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置SSH"><span class="nav-number">3.1.</span> <span class="nav-text">配置SSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加SSH_Key到Github"><span class="nav-number">3.2.</span> <span class="nav-text">添加SSH Key到Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Github新建博客"><span class="nav-number">3.3.</span> <span class="nav-text">使用Github新建博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Hexo"><span class="nav-number">3.4.</span> <span class="nav-text">使用Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到Github"><span class="nav-number">3.5.</span> <span class="nav-text">部署到Github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#感悟根源"><span class="nav-number">1.</span> <span class="nav-text">感悟根源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感悟细则"><span class="nav-number">2.</span> <span class="nav-text">感悟细则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感悟总结"><span class="nav-number">3.</span> <span class="nav-text">感悟总结</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
