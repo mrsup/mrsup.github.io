@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://mrsup.github.io/"/>
-  <updated>2015-05-26T02:07:50.474Z</updated>
+  <updated>2015-05-26T02:09:42.253Z</updated>
   <id>http://mrsup.github.io/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://mrsup.github.io/2015/05/26/%E5%AF%B9%E9%80%A0%E8%BD%AE%E5%AD%90%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E8%AE%A4%E8%AF%86/"/>
     <id>http://mrsup.github.io/2015/05/26/对造轮子的一些新认识/</id>
     <published>2015-05-26T01:43:00.000Z</published>
-    <updated>2015-05-26T02:07:50.474Z</updated>
-    <content type="html"><![CDATA[<h2 id="感悟根源">感悟根源</h2><p>最近搭建好了Github+Hexo博客网站，想着写很多很多的博客来展示自己，前几天折腾<strong>Chrome+Goagent+SwitchyOmega</strong>翻墙，瞎折腾了很久才成功，于是乎想整理一篇翻墙的教程博客，然而一不小心又出现了一些莫名其妙的问题又不能翻墙，心头万只草泥马奔腾而过啊！<br>今天，在逛<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>的时候看见了很多介绍翻墙的教程，仔细看了看，发现比我所想的更丰富、更全面、更优秀，于是我开始思考是否还有继续写自己教程博客的必要。开始一些自认为很有意义的感悟与认知。  </p>
+    <updated>2015-05-26T02:09:42.253Z</updated>
+    <content type="html"><![CDATA[<h2 id="感悟根源">感悟根源</h2><p>最近搭建好了Github+Hexo博客网站，想着写很多很多的博客来展示自己，前几天折腾<strong>Chrome+Goagent+SwitchyOmega</strong>翻墙，瞎折腾了很久才成功，于是乎想整理一篇翻墙的教程博客，然而一不小心又出现了一些莫名其妙的问题又不能翻墙，心头万只草泥马奔腾而过啊！<br>今天，在逛<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>的时候看见了很多介绍翻墙的教程，仔细看了看，发现比我所想的更丰富、更全面、更优秀，于是我开始思考是否还有继续写自己教程博客的必要。开始一些自认为很有意义的感悟与认知。<br><a id="more"></a></p>
 <h2 id="感悟细则">感悟细则</h2><p>互联网是一个无穷大的世界，里面有着浩瀚的知识海洋，有着各种各样不计其数的问题与答案，那么遇到问题-&gt;查找问题-&gt;解决问题，之后呢？遗忘问题么。<br>所以我认为博客很有必要存在，它可以总结问题，总结自己，它也可以表达自己，展示自己。<br>也许别人的博客比我更好更优秀，但我还是应该写的，也许我的博客现在不怎么好，但一直维护，总有一天会成为一个问题的优秀解决方案！<br>只是在编写自己博客的同时，借鉴他人的劳动成果是一件非常有意义有必要的事情。  </p>
 <pre><code>站在巨人的肩膀上才能看得更远！
 </code></pre><p>别人的博客、总结、劳动成果就好比一个个已经完成的轮子，我如果想造出自己心目中完美的轮子，那么借鉴别人就是一件很有意义的事情。</p>
@@ -31,7 +31,8 @@
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="感悟根源">感悟根源</h2><p>最近搭建好了Github+Hexo博客网站，想着写很多很多的博客来展示自己，前几天折腾<strong>Chrome+Goagent+SwitchyOmega</strong>翻墙，瞎折腾了很久才成功，于是乎想整理一篇翻墙的教程博]]>
+    <![CDATA[<h2 id="感悟根源">感悟根源</h2><p>最近搭建好了Github+Hexo博客网站，想着写很多很多的博客来展示自己，前几天折腾<strong>Chrome+Goagent+SwitchyOmega</strong>翻墙，瞎折腾了很久才成功，于是乎想整理一篇翻墙的教程博客，然而一不小心又出现了一些莫名其妙的问题又不能翻墙，心头万只草泥马奔腾而过啊！<br>今天，在逛<a href="http://www.jianshu.com/">简书</a>的时候看见了很多介绍翻墙的教程，仔细看了看，发现比我所想的更丰富、更全面、更优秀，于是我开始思考是否还有继续写自己教程博客的必要。开始一些自认为很有意义的感悟与认知。<br>]]>
+    
     </summary>
     
       <category term="感悟" scheme="http://mrsup.github.io/tags/%E6%84%9F%E6%82%9F/"/>
